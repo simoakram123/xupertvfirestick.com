@@ -1,0 +1,328 @@
+:root {
+    --primary: #007bff; /* Bright Blue */
+    --primary-dark: #0056b3;
+    --navy: #0b1a32; /* Header/Footer Navy */
+    --bg-main: #ffffff;
+    --bg-light: #f8f9fa;
+    --text-main: #333333;
+    --text-title: #000000;
+    --text-muted: #666666;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER - THE XUPER TV STYLE */
+.header {
+    background: var(--navy);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.logo img {
+    height: 40px;
+    border-radius: 5px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--primary);
+}
+
+.btn-header {
+    background: var(--primary);
+    color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: none;
+}
+
+.btn-header:hover {
+    background: var(--primary-dark);
+}
+
+.lang-selector {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.lang-selector a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.lang-selector a:hover, .lang-selector a.active {
+    opacity: 1;
+}
+
+.lang-flag {
+    width: 20px;
+    border-radius: 2px;
+}
+
+/* HERO SECTION - CLEAN AND BOLD */
+.hero {
+    padding: 100px 0 60px;
+    text-align: center;
+    background: var(--bg-main);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+.hero-desc {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.hero-boxes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.hero-box {
+    background: var(--primary);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.hero-box:hover {
+    transform: translateY(-3px);
+    background: var(--primary-dark);
+}
+
+/* APP SPECS TABLE */
+.specs-table-wrap {
+    margin: 40px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table tr:nth-child(even) {
+    background: var(--bg-light);
+}
+
+.specs-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.specs-table td:first-child {
+    font-weight: 800;
+    color: var(--navy);
+    width: 40%;
+}
+
+/* SECTION TITLES */
+.section-label {
+    background: var(--navy);
+    color: #ffffff;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 0 50px 50px 0;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+}
+
+/* CARDS */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.card {
+    background: var(--navy);
+    color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+/* DOWNLOADER - OFFICIAL ORANGE */
+.dl-card {
+    background: #ff6600; /* Downloader Official Orange */
+    padding: 15px 35px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+    border: none;
+}
+
+.dl-card img {
+    height: 35px;
+    width: auto;
+}
+
+.dl-code {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.dl-copy-btn {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dl-copy-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* FOOTER */
+.footer {
+    background: var(--navy);
+    color: #ffffff;
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header .nav { display: none; }
+    .hero-title { font-size: 1.8rem; }
+    .hero-box { width: 100%; flex: 1 1 auto; }
+}
